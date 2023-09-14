@@ -112,6 +112,7 @@ struct ContentView: View {
     }
     
 }
+// 주석 추가
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
