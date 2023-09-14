@@ -11,6 +11,8 @@
 		401B4C392AAAEDEF006D86EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401B4C382AAAEDEF006D86EF /* ContentView.swift */; };
 		401B4C3B2AAAEDF0006D86EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401B4C3A2AAAEDF0006D86EF /* Assets.xcassets */; };
 		401B4C3E2AAAEDF0006D86EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 401B4C3D2AAAEDF0006D86EF /* Preview Assets.xcassets */; };
+		40F78B322AAAEF350028F492 /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 40F78B312AAAEF350028F492 /* ACarousel */; };
+		40F78B342AAAEF7E0028F492 /* BACCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F78B332AAAEF7E0028F492 /* BACCalculatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		401B4C382AAAEDEF006D86EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		401B4C3A2AAAEDF0006D86EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		401B4C3D2AAAEDF0006D86EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40F78B332AAAEF7E0028F492 /* BACCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BACCalculatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F78B322AAAEF350028F492 /* ACarousel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +55,8 @@
 		401B4C352AAAEDEF006D86EF /* BACCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				401B4C362AAAEDEF006D86EF /* BACCalculatorApp.swift */,
-				401B4C382AAAEDEF006D86EF /* ContentView.swift */,
+				40F78B2F2AAAEEF90028F492 /* ViewModel */,
+				40F78B2E2AAAEEF20028F492 /* View */,
 				401B4C3A2AAAEDF0006D86EF /* Assets.xcassets */,
 				401B4C3C2AAAEDF0006D86EF /* Preview Content */,
 			);
@@ -65,6 +69,23 @@
 				401B4C3D2AAAEDF0006D86EF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		40F78B2E2AAAEEF20028F492 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				401B4C382AAAEDEF006D86EF /* ContentView.swift */,
+				401B4C362AAAEDEF006D86EF /* BACCalculatorApp.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40F78B2F2AAAEEF90028F492 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40F78B332AAAEF7E0028F492 /* BACCalculatorViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,9 @@
 			dependencies = (
 			);
 			name = BACCalculator;
+			packageProductDependencies = (
+				40F78B312AAAEF350028F492 /* ACarousel */,
+			);
 			productName = BACCalculator;
 			productReference = 401B4C332AAAEDEF006D86EF /* BACCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 401B4C2A2AAAEDEF006D86EF;
+			packageReferences = (
+				40F78B302AAAEF350028F492 /* XCRemoteSwiftPackageReference "ACarousel" */,
+			);
 			productRefGroup = 401B4C342AAAEDEF006D86EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +166,7 @@
 			files = (
 				401B4C392AAAEDEF006D86EF /* ContentView.swift in Sources */,
 				401B4C372AAAEDEF006D86EF /* BACCalculatorApp.swift in Sources */,
+				40F78B342AAAEF7E0028F492 /* BACCalculatorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +365,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40F78B302AAAEF350028F492 /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JWAutumn/ACarousel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40F78B312AAAEF350028F492 /* ACarousel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40F78B302AAAEF350028F492 /* XCRemoteSwiftPackageReference "ACarousel" */;
+			productName = ACarousel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 401B4C2B2AAAEDEF006D86EF /* Project object */;
 }
